@@ -1,66 +1,105 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## planify
+<p>An open source task manager</p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# TODO
+1. Task List
+Display a list of tasks that need to be done, showing essential details such as:
+Task name
+Due date
+Priority level (e.g., High, Medium, Low)
+Status (e.g., To Do, In Progress, Completed)
+Add features like:
+Search bar to filter tasks.
+Sort options (by due date, priority, etc.).
+2. Create New Tasks
+Add a form to create new tasks with fields like:
+Task name
+Description
+Due date
+Priority level
+Assign to (user)
+Provide an option to set reminders for upcoming tasks.
+3. Task Categories or Projects
+Group tasks into categories or projects (e.g., "Work", "Personal", "Urgent").
+Each task can belong to a project, which helps organize tasks better.
+4. Kanban Board
+Create a Kanban board to move tasks between columns (e.g., To Do → In Progress → Completed).
+Make it interactive with drag-and-drop functionality.
+5. Task Details
+Clicking on a task should open a detailed view that displays:
+Task description
+Comments (for team collaboration)
+Attachments (files, images)
+Activity log (task updates, status changes)
+6. Task Comments and Collaboration
+Allow users to comment on tasks to collaborate with teammates.
+Mentions: Users can tag others in comments using @username to notify them.
+File attachments for each task (PDFs, images, documents).
+7. Due Date and Calendar View
+Show tasks with due dates on a calendar view.
+Allow users to drag tasks to different dates on the calendar.
+Highlight overdue tasks and upcoming deadlines.
+8. Task Priority and Labels
+Users can set priority (e.g., High, Medium, Low).
+Add labels or tags for easy task identification (e.g., "Urgent", "Pending", "Review").
+9. Notifications and Alerts
+Push notifications or email alerts for:
+Upcoming due dates
+Task changes (status updates, assignments)
+New comments
+Real-time updates for team members.
+10. Task Assignment and Collaboration
+Users can assign tasks to themselves or teammates.
+View who is working on each task and what tasks are assigned to them.
+11. Progress Tracking
+A progress bar or percentage completion indicator for each task.
+Option to mark sub-tasks as completed within a main task.
+12. Time Tracking
+Track how much time is spent on each task or project.
+Include a stopwatch timer or manual time entry for task duration.
+13. Reports and Analytics
+Provide insights like:
+Total number of tasks completed vs. pending
+Task completion trends (daily, weekly, monthly)
+User-specific task completion rate
+Downloadable reports in PDF or CSV format.
+14. Task Archiving or Deleting
+Archive completed tasks for reference.
+Option to delete unnecessary tasks.
+15. User Profiles and Settings
+Users can create profiles with their name, photo, and role.
+Customizable dashboard settings for each user (e.g., dark mode, default view).
+16. Recurring Tasks
+Users can set tasks to recur daily, weekly, monthly, etc.
+Automatically create new tasks based on the recurrence pattern.
+17. Search and Filters
+A robust search bar to filter tasks by:
+Due date
+Priority
+Assigned user
+Status
+Filters for viewing tasks by specific categories or projects.
+18. Task Templates
+Users can create templates for recurring tasks or projects (e.g., "Daily Standup" or "Client Meeting").
+19. Integrations with Other Tools
+Integrate with:
+Google Calendar to sync due dates and tasks.
+Slack to send notifications about task updates.
+Email notifications for overdue tasks or reminders.
+20. Dashboard Customization
+Let users customize their dashboard layout (e.g., widgets, task list arrangement, color themes).
+Show charts or graphs for visual task tracking and progress.
+User Flow Example:
+Landing Page: When users first visit the dashboard, they see a summary of their tasks with key sections: "My Tasks", "Due Today", and "Upcoming Tasks".
+Task Creation: A prominent "Add Task" button lets users quickly create new tasks.
+Task Board: Users can drag tasks from "To Do" to "In Progress" to "Completed" in a Kanban-like interface.
+Calendar View: View tasks and deadlines on a monthly calendar.
+Task Details: Clicking a task shows all details, comments, and allows updating the status or priority.
+Technologies to Use:
+Frontend: React, Vue.js, or Angular for a dynamic dashboard experience.
+Backend: Laravel (PHP), Node.js, Django, or Flask for handling task data and user management.
+Database: MySQL, PostgreSQL, or SQLite for storing tasks and user data.
+Authentication: OAuth or JWT for secure user login and session management.
+Real-time: WebSockets (Pusher, Laravel Echo) for real-time task updates and notifications.
+This feature set provides an interactive and user-friendly task management system. You can prioritize the most relevant features for your users and add more advanced functionality as needed.
