@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('task');
             $table->string('priority');
+            $table->dateTime('ultimatum')->nullable();
             $table->timestamps();
         });
     }

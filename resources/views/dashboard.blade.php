@@ -73,6 +73,11 @@
                                     <option value="High">High</option>
                                 </select>
                             </div>
+                            
+                                            <div class="flex flex-col">
+                    <label for="ultimatum" name="ultimatum">Ultimatum</label>
+                    <input class="w-48" type="date" name="ultimatum">
+                                            </div>
 
                             <!-- Submit Button -->
                             <div class="flex justify-end">

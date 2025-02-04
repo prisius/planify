@@ -30,8 +30,12 @@
 
 </p>
                 </div>
-
-                <!-- Edit and Delete Buttons -->
+                <!-- Date Picker -->
+                <div class="flex flex-col">
+                    <label for="ultimatum">Ultimatum</label>
+                    {{$task->ultimatum}}
+                </div>
+                                <!-- Edit and Delete Buttons -->
                 <div class="flex justify-end mt-4">
                     <!-- Edit Button -->
                     <a href="{{route('dashboard')}}">
