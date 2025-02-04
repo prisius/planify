@@ -9,26 +9,42 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
+use Carbon\Carbon;
 
 class TasksController extends Controller
 {
-    public function index()
+
+
+
+    public function index(Request $request)
     {
+        $query = Tasks::query();
 
-        $tasks = Tasks::all()->sortBy(function ($task) {
-            // Assign a numeric value to each priority to help with sorting
-            $priorityOrder = [
-                'High' => 1,
-                'Medium' => 2,
-                'Low' => 3,
-            ];
+        // Apply priority filter
+        if ($request->has('priority') && !empty($request->priority)) {
+            $query->where('priority', $request->priority);
+        }
 
-            // Return the numeric value based on the task's priority
-            return $priorityOrder[$task->priority] ?? 4;  // Default to 4 if priority is not set or invalid
-        });
+        // Apply ultimatum (filter all tasks up until the selected date)
+        if ($request->has('ultimatum') && !empty($request->ultimatum)) {
+            $query->whereDate('ultimatum', '<=', $request->ultimatum);
+        }
 
-        return view('dashboard', ['tasks' => $tasks]); // Pass tasks to the dashboard view
+        // Order tasks by priority and due date
+        $tasks = $query->orderByRaw("
+        CASE 
+            WHEN priority = 'High' THEN 1
+            WHEN priority = 'Medium' THEN 2
+            WHEN priority = 'Low' THEN 3
+            ELSE 4
+        END
+    ")->orderBy('ultimatum', 'asc')->get(); // Order by closest due date first
+
+        return view('dashboard', ['tasks' => $tasks]);
     }
+
+
+
 
     public function create(Request $request)
     {
@@ -51,6 +67,9 @@ class TasksController extends Controller
         // Optionally, redirect back to the task list or show a success message
         return redirect()->route('dashboard')->with('success', 'Task created successfully!');
     }
+
+
+
 
 
     // app/Http/Controllers/TaskController.php
