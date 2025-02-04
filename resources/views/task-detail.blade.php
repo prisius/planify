@@ -17,6 +17,7 @@
                     <p class="text-gray-600 dark:text-gray-400">Created At: {{ $task->created_at->format('M d, Y') }}</p>
                     <p class="text-gray-600 dark:text-gray-400">Updated At: {{ $task->updated_at->format('M d, Y') }}</p>
 
+
 @if($task->users->isNotEmpty())
     <ul>
         <p>Assigned Users :</p>
@@ -32,9 +33,11 @@
                 </div>
                 <!-- Date Picker -->
                 <div class="flex flex-col">
-                    <label for="ultimatum">Ultimatum</label>
+                    <label for="ultimatum">Due Date</label>
                     {{$task->ultimatum}}
                 </div>
+
+                    <p class="text-gray-600 dark:text-gray-400">Tags: {{ $task->updated_at->format('M d, Y') }}</p>
                                 <!-- Edit and Delete Buttons -->
                 <div class="flex justify-end mt-4">
                     <!-- Edit Button -->

@@ -54,6 +54,8 @@ class TasksController extends Controller
             'description' => 'required|string|max:255',
             'priority' => 'required|string|in:Low,Medium,High', // Ensure priority is one of these strings
             'ultimatum' => 'nullable|date|after:today',
+            'color' => 'nullable|string',
+            'tags' => 'nullable'
         ]);
 
         // Create a new task in the database
@@ -62,6 +64,8 @@ class TasksController extends Controller
         $task->description = $validatedData['description'];
         $task->priority = $validatedData['priority']; // Store the string value
         $task->ultimatum = $validatedData['ultimatum'];
+        $task->color = $validatedData['color'];
+        $task->tags = $validatedData['tags'];
         $task->save();
 
         // Optionally, redirect back to the task list or show a success message

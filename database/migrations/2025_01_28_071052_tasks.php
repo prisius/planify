@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('task');
             $table->string('priority');
             $table->dateTime('ultimatum')->nullable();
+            $table->string('color')->nullable();
+            $table->json('tags')->nullable();
             $table->timestamps();
         });
     }

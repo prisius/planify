@@ -4,9 +4,10 @@
     <ul>
         @foreach($tasks as $task)
         <a href="/tasks/{{$task->id}}">
-        <li class="{{$task->priority == "High" ? 'bg-red-400' : 'bg-gray-200'}}  mb-2 p-3 overflow-auto">{{ $task->task }} (Priority: {{ $task->priority }})
 
-            </li>
+<li style="background-color: {{ $task->color }};" class="mb-2 p-3 overflow-auto text-white">
+    {{ $task->task }} (Priority: {{ $task->priority }})
+</li>
         </a>
         @endforeach
     </ul>

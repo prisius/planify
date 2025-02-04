@@ -75,9 +75,17 @@
                             </div>
                             
                                             <div class="flex flex-col">
-                    <label for="ultimatum" name="ultimatum">Ultimatum</label>
+                    <label for="ultimatum" name="ultimatum">Due date</label>
                     <input class="w-48" type="date" name="ultimatum">
                                             </div>
+
+                             
+                                            <div class="flex flex-col">
+                    <label for="color" name="color">Choose color</label>
+                    <input class="w-10" class="w-48" type="color" name="color">
+                                            </div>
+
+                
 
                             <!-- Submit Button -->
                             <div class="flex justify-end">
