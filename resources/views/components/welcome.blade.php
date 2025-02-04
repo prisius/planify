@@ -2,6 +2,8 @@
     <h1 class="mt-8 text-2xl font-medium text-gray-900 dark:text-white">
         Welcome to your Dashboard !
     </h1>
+    
+<!--TODO: make another migration and controller and make relations for tags !-->
 
 <div class="ml-auto">
 

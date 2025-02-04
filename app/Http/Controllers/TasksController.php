@@ -52,22 +52,20 @@ class TasksController extends Controller
         $validatedData = $request->validate([
             'task' => 'required|string|max:128',
             'description' => 'required|string|max:255',
-            'priority' => 'required|string|in:Low,Medium,High', // Ensure priority is one of these strings
+            'priority' => 'required|string|in:Low,Medium,High',
             'ultimatum' => 'nullable|date|after:today',
             'color' => 'nullable|string',
-            'tags' => 'nullable'
+            'tags' => 'nullable|array',
         ]);
 
-        // Create a new task in the database
         $task = new Tasks();
         $task->task = $validatedData['task'];
         $task->description = $validatedData['description'];
-        $task->priority = $validatedData['priority']; // Store the string value
+        $task->priority = $validatedData['priority'];
         $task->ultimatum = $validatedData['ultimatum'];
         $task->color = $validatedData['color'];
-        $task->tags = $validatedData['tags'];
+        $task->tags = json_encode($validatedData['tags'] ?? []);
         $task->save();
-
         // Optionally, redirect back to the task list or show a success message
         return redirect()->route('dashboard')->with('success', 'Task created successfully!');
     }
