@@ -1,10 +1,15 @@
-## planify
+# planify
+
 <p>An open source task manager</p>
 
 <p>License MIT</p>
 
 
-# TODO
+## TODO
+
+## Important !
+Should implement guard for workspaces.
+
 1. Task List\
 Display a list of tasks that need to be done, showing essential details such as:\
 ~~Task name~~

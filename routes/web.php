@@ -6,7 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\TaskDetailController;
 use App\Http\Controllers\TasksController;
-use App\Http\Middleware\CheckIfAdminExists;
+use Illuminate\Support\Facades\Auth;
+
+
 
 Route::get('/', function () {
     return view('welcome');
