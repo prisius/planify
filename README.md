@@ -7,20 +7,21 @@
 # TODO
 1. Task List
 Display a list of tasks that need to be done, showing essential details such as:
-Task name
-Due date
-Priority level (e.g., High, Medium, Low)
+~~Task name~~
+~~Due date~~
+~~Priority level (e.g., High, Medium, Low)~~
 Status (e.g., To Do, In Progress, Completed)
 Add features like:
 Search bar to filter tasks.
 Sort options (by due date, priority, etc.).
 2. Create New Tasks
 Add a form to create new tasks with fields like:
-Task name
-Description
-Due date
-Priority level
-Assign to (user)
+~~Task name~~
+~~Description~~
+~~Due date~~
+~~Priority level~~
+~~Filter by priority and Date~~
+Assign to (user) WIP
 Provide an option to set reminders for upcoming tasks.
 3. Task Categories or Projects
 Group tasks into categories or projects (e.g., "Work", "Personal", "Urgent").
