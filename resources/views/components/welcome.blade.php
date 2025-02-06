@@ -8,8 +8,8 @@
 <div class="ml-auto">
 
 <form class="flex flex-col" method="GET" action="{{ route('dashboard') }}" id="filter-form">
-    <label for="priority">Filter by Priority:</label>
-    <select name="priority" id="priority">
+    <label class="text-gray-900 dark:text-white" for="priority">Filter by Priority:</label>
+    <select class="p-3" name="priority" id="priority">
         <option value="">All</option>
         <option value="High" {{ request('priority') == 'High' ? 'selected' : '' }}>High</option>
         <option value="Medium" {{ request('priority') == 'Medium' ? 'selected' : '' }}>Medium</option>
@@ -17,8 +17,8 @@
     </select>
 
  <!-- Ultimatum (Date) Filter -->
-    <label for="ultimatum">Filter by Due Date:</label>
-    <input type="date" name="ultimatum" id="ultimatum" value="{{ request('ultimatum') }}">
+    <label class="text-gray-900 dark:text-white" for="ultimatum">Filter by Due Date:</label>
+    <input class="p-3" type="date" name="ultimatum" id="ultimatum" value="{{ request('ultimatum') }}">
 </form>
 
 <script>

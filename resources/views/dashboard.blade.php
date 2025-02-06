@@ -40,6 +40,7 @@
                                 <label for="task" class="block text-sm font-medium text-gray-700">Task</label>
                                 <input 
                                     type="text" 
+                                    class="p-3 border-2 w-full"
                                     name="task" 
                                     id="task" 
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
@@ -52,6 +53,7 @@
 <div class="mb-4">
     <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
     <textarea 
+        class="p-3 w-full border-2"
         name="description" 
         id="description" 
         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
@@ -63,6 +65,7 @@
                             <div class="mb-4">
                                 <label for="priority" class="block text-sm font-medium text-gray-700">Priority</label>
                                 <select 
+                                class="h-6 w-full"
                                     name="priority" 
                                     id="priority" 
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
@@ -76,7 +79,7 @@
                             
                                             <div class="flex flex-col">
                     <label for="ultimatum" name="ultimatum">Due date</label>
-                    <input class="w-48" type="date" name="ultimatum">
+                    <input class="w-48 border-2" type="date" name="ultimatum">
                                             </div>
 
                              

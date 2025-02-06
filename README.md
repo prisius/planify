@@ -1,6 +1,8 @@
 ## planify
 <p>An open source task manager</p>
 
+<p>License MIT</p>
+
 
 # TODO
 1. Task List

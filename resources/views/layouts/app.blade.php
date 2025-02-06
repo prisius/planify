@@ -13,11 +13,9 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+       @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <!-- Styles -->
-        @livewireStyles
+       @livewireStyles
     </head>
     <body class="font-sans antialiased">
         <x-banner />
