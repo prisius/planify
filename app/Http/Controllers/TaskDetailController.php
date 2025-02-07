@@ -19,10 +19,22 @@ class TaskDetailController extends Controller
 
     public function edit(Request $request, $id)
     {
+            $request->validate([
+        'tags' => 'nullable|string', // Accept tags as a comma-separated string
+    ]);
+
+    $tags = $request->tags ? explode(',', $request->tags) : [];
+
+
+    $tags = array_map('trim', $tags);
+
         $task = Tasks::findOrFail($id);
         $task->task = $request->input('task');
         $task->description = $request->input('description');
         $task->priority = $request->input('priority'); // On met à jour la priorité
+    $task->update([
+        'tags' => $tags,
+    ]);
         $task->save();
 
         return redirect()->route('dashboard'); // Ou une autre redirection

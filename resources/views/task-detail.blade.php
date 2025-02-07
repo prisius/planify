@@ -121,6 +121,24 @@ Retour
     </select>
 </div>
 
+
+<div class="mb-4">
+    <label for="tags" class="block text-sm font-medium text-gray-700">Tags</label>
+
+
+<input 
+    type="text" 
+    name="tags" 
+    id="tags" 
+
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
+    value="{{ isset($task->tags) && is_array($task->tags) ? implode(',', $task->tags) : '' }}"
+>
+
+</div>
+
+
+
                             <!-- Submit Button -->
                             <div class="flex justify-end">
                                 <button 

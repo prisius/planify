@@ -7,7 +7,19 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Tasks extends Model
 {
-    protected $guarded = [];
+    protected $fillable = [
+        'description',
+        'task',
+        'priority',
+        'ultimatum',
+        'color',
+        'tags',
+    ];
+    
+
+    protected $casts = [
+        'tags' => 'array',
+    ];
 
     public function owner()
     {
