@@ -2,20 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Tasks extends Model
 {
-    protected $fillable = [
-        'description',
-        'task',
-        'priority',
-        'ultimatum',
-        'color',
-        'tags',
-    ];
-    
+    use HasFactory;
+
+    protected $fillable = ['board_id', 'title', 'description', 'priority', 'ultimatum', 'color'];
 
     protected $casts = [
         'tags' => 'array',
@@ -30,5 +25,10 @@ class Tasks extends Model
     public function users(): BelongsToMany
     {
         return $this->belongsToMany(User::class, 'task_user', 'task_id', 'user_id');
+    }
+    
+        public function lobby()
+    {
+        return $this->belongsTo(Board::class);
     }
 }
